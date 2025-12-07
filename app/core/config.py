@@ -1,18 +1,23 @@
 from datetime import timedelta
+from pathlib import Path
 
 from authx import AuthX, AuthXConfig
 from jwt import InvalidTokenError
+from pydantic import validator
 from pydantic.v1 import BaseSettings
 from typing import List
+
+BASE_DIR = Path(__file__).resolve().parent
 
 class Settings(BaseSettings):
     DATABASE_URL: str
     ORIGINS: List[str]
 
     class Config:
-        env_file = ".env"
+        env_file = BASE_DIR / ".env"
+        env_file_encoding = 'utf-8'
 
-settings = Settings(DATABASE_URL='mariadb+aiomysql://root:345543qwe@localhost:3306/db_blog', ORIGINS=["http://localhost:5173"])
+settings = Settings()
 
 config = AuthXConfig()
 config.JWT_SECRET_KEY = "secret"

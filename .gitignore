@@ -39,7 +39,7 @@ ruff_cache/
 htmlcov/
 
 # --- Environment files ---
-.env
+app/core/.env
 .env.*
 *.secret
 secrets/
