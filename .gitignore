@@ -1,0 +1,67 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDE / Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+logs/
+*.out
+
+# --- Bytecode / Cache ---
+.cache/
+.mypy_cache/
+.pytest_cache/
+.pyre/
+ruff_cache/
+
+# --- Coverage ---
+.coverage
+.coverage.*
+htmlcov/
+
+# --- Environment files ---
+.env
+.env.*
+*.secret
+secrets/
+
+# --- Databases / dumps ---
+*.sqlite
+*.db
+*.sqlite3
+dump.sql
+
+# --- Docker ---
+docker_temp/
+.docker/
+
+# --- Alembic ---
+migrations/README
+migrations/alembic.ini
+
+# --- Static / uploads ---
+media/
+uploads/
+
+# --- Build ---
+dist/
+build/
